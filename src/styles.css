@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    background: #F5FFFA;
+}
+
+header {
+    display: flex;
+    background: #3F51B5;
+    color: #fafafa;
+    border-radius: 10px;
+}
+
+header h2 {
+    margin-left: 20px;
+}

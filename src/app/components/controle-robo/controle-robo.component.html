@@ -1,0 +1,138 @@
+<div class="container-xxl d-flex gap-3 flex-column">
+  <header class="mt-2">
+    <h2>Interface de controle do R.O.B.O.</h2>
+  </header>
+
+  <div class="card">
+    <div class="card-header d-flex">
+      <h4>Braços</h4>
+    </div>
+    <div class="card-header d-flex mt-3">
+      <h6>Braço Esquerdo</h6>
+    </div>
+    <div class="card-body row g-3">
+      <div class="col-md-6">
+        <label for="selectBracoEsquerdoCotovelo" class="form-label"
+          >Cotovelo</label
+        >
+        <select
+          class="form-select form-select-md mb-3"
+          aria-label=".form-select-md example"
+          id="selectBracoEsquerdoCotovelo"
+          [(ngModel)]="robo.idMovimentoCotoveloEsquerdo"
+          (change)="movimentarRobo(0)"
+        >
+          <option
+            *ngFor="let movimento of movimentosCotovelo"
+            [value]="movimento.id"
+          >
+            {{ movimento.descricao }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="selectBracoEsquerdoPulso" class="form-label">Pulso</label>
+        <select
+          class="form-select form-select-md mb-3"
+          aria-label=".form-select-md example"
+          id="selectBracoEsquerdoPulso"
+          [(ngModel)]="robo.idMovimentoPulsoEsquerdo"
+          (change)="movimentarRobo(1)"
+        >
+          <option
+            *ngFor="let movimento of movimentosPulso"
+            [value]="movimento.id"
+          >
+            {{ movimento.descricao }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card-header d-flex">
+      <h6>Braço Direito</h6>
+    </div>
+    <div class="card-body row g-3">
+      <div class="col-md-6">
+        <label for="selectBracoDireitoCotovelo" class="form-label"
+          >Cotovelo</label
+        >
+        <select
+          class="form-select form-select-md mb-3"
+          aria-label=".form-select-md example"
+          id="selectBracoDireitoCotovelo"
+          [(ngModel)]="robo.idMovimentoCotoveloDireito"
+          (change)="movimentarRobo(2)"
+        >
+          <option
+            *ngFor="let movimento of movimentosCotovelo"
+            [value]="movimento.id"
+          >
+            {{ movimento.descricao }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="selectBracoDireitoPulso" class="form-label">Pulso</label>
+        <select
+          class="form-select form-select-md mb-3"
+          aria-label=".form-select-md example"
+          id="selectBracoDireitoPulso"
+          [(ngModel)]="robo.idMovimentoPulsoDireito"
+          (change)="movimentarRobo(3)"
+        >
+          <option
+            *ngFor="let movimento of movimentosPulso"
+            [value]="movimento.id"
+          >
+            {{ movimento.descricao }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header d-flex">
+      <h4>Cabeça</h4>
+    </div>
+    <div class="card-body row g-3">
+      <div class="col-md-6">
+        <label for="selectCabecaRotacao" class="form-label">Rotação</label>
+        <select
+          class="form-select form-select-md mb-3"
+          aria-label=".form-select-md example"
+          id="selectCabecaRotacao"
+          [(ngModel)]="robo.idMovimentoRotacao"
+          (change)="movimentarRobo(4)"
+        >
+          <option
+            *ngFor="let movimento of movimentosRotacao"
+            [value]="movimento.id"
+          >
+            {{ movimento.descricao }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="selectCabecaInclinacao" class="form-label"
+          >Inclinação</label
+        >
+        <select
+          class="form-select form-select-md mb-3"
+          aria-label=".form-select-md example"
+          id="selectCabecaInclinacao"
+          [(ngModel)]="robo.idMovimentoInclinacao"
+          (change)="movimentarRobo(5)"
+        >
+          <option
+            *ngFor="let movimento of movimentosInclinacao"
+            [value]="movimento.id"
+          >
+            {{ movimento.descricao }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
